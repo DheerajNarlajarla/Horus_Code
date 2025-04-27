@@ -1,0 +1,148 @@
+/* HorusCode Theme - Egyptian-inspired Gold and Dark */
+
+/* Main editor background */
+.monaco-editor {
+  background-color: #1A1A1A !important;
+}
+
+/* Sidebar background */
+.sidebar {
+  background-color: #121212 !important;
+}
+
+/* Activity bar */
+.monaco-workbench .part.activitybar {
+  background-color: #0A0A0A !important;
+}
+
+/* Title bar */
+.monaco-workbench .part.titlebar {
+  background-color: #0A0A0A !important;
+}
+
+/* Status bar */
+.monaco-workbench .part.statusbar {
+  background-color: #0A0A0A !important;
+  border-top: 1px solid #E6A23C !important;
+}
+
+/* Editor group header */
+.monaco-workbench .part.editor > .content .editor-group-container > .title {
+  background-color: #121212 !important;
+}
+
+/* Tabs */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab {
+  background-color: #121212 !important;
+  border: 1px solid transparent !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active {
+  background-color: #1A1A1A !important;
+  border-top: 1px solid #E6A23C !important;
+}
+
+/* Panel */
+.monaco-workbench .part.panel {
+  background-color: #121212 !important;
+  border-top: 1px solid #E6A23C !important;
+}
+
+/* Terminal */
+.monaco-workbench .part.panel > .content .monaco-editor {
+  background-color: #121212 !important;
+}
+
+/* Buttons */
+.monaco-button {
+  background-color: #E6A23C !important;
+  color: #000000 !important;
+  border: 1px solid #F5D393 !important;
+}
+
+.monaco-button:hover {
+  background-color: #F5D393 !important;
+}
+
+/* Accent color */
+.monaco-workbench .monaco-action-bar .action-item.checked .action-label {
+  color: #E6A23C !important;
+}
+
+/* Scrollbars */
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(230, 162, 60, 0.4) !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  background: rgba(230, 162, 60, 0.7) !important;
+}
+
+/* Selection */
+.monaco-editor .selected-text {
+  background-color: rgba(230, 162, 60, 0.3) !important;
+}
+
+/* Cursor */
+.monaco-editor .cursor {
+  background-color: #E6A23C !important;
+  border-color: #E6A23C !important;
+}
+
+/* Line highlight */
+.monaco-editor .current-line {
+  border: none !important;
+  background-color: rgba(230, 162, 60, 0.1) !important;
+}
+
+/* Sidebar icons */
+.monaco-workbench .activitybar > .content .monaco-action-bar .action-item.checked .active-item-indicator:before {
+  border-left-color: #E6A23C !important;
+}
+
+/* Input fields */
+.monaco-inputbox {
+  border: 1px solid #333 !important;
+}
+
+.monaco-inputbox.focused {
+  border-color: #E6A23C !important;
+}
+
+/* Dropdown */
+.monaco-dropdown {
+  border: 1px solid #333 !important;
+}
+
+.monaco-dropdown:focus {
+  border-color: #E6A23C !important;
+}
+
+/* Tree view selection */
+.monaco-list.focused .monaco-list-row.selected {
+  background-color: rgba(230, 162, 60, 0.2) !important;
+}
+
+.monaco-list .monaco-list-row.focused {
+  background-color: rgba(230, 162, 60, 0.1) !important;
+}
+
+/* Links */
+a {
+  color: #E6A23C !important;
+}
+
+a:hover {
+  color: #F5D393 !important;
+}
+
+/* Badge */
+.monaco-count-badge {
+  background-color: #E6A23C !important;
+  color: #000000 !important;
+}
+
+/* Progress bar */
+.monaco-progress-container .progress-bit {
+  background-color: #E6A23C !important;
+}

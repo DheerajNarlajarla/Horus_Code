@@ -1,0 +1,212 @@
+/* BloodCode Theme - Oxblood Red and Pitch Black */
+
+/* Main editor background */
+.monaco-editor {
+  background-color: #0A0A0A !important;
+}
+
+/* Sidebar background */
+.sidebar {
+  background-color: #050505 !important;
+}
+
+/* Activity bar */
+.monaco-workbench .part.activitybar {
+  background-color: #000000 !important;
+}
+
+/* Title bar */
+.monaco-workbench .part.titlebar {
+  background-color: #000000 !important;
+}
+
+/* Status bar */
+.monaco-workbench .part.statusbar {
+  background-color: #000000 !important;
+  border-top: 1px solid #6B0F1A !important;
+}
+
+/* Editor group header */
+.monaco-workbench .part.editor > .content .editor-group-container > .title {
+  background-color: #050505 !important;
+}
+
+/* Tabs */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab {
+  background-color: #050505 !important;
+  border: 1px solid transparent !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active {
+  background-color: #0A0A0A !important;
+  border-top: 1px solid #6B0F1A !important;
+}
+
+/* Panel */
+.monaco-workbench .part.panel {
+  background-color: #050505 !important;
+  border-top: 1px solid #6B0F1A !important;
+}
+
+/* Terminal */
+.monaco-workbench .part.panel > .content .monaco-editor {
+  background-color: #050505 !important;
+}
+
+/* Buttons */
+.monaco-button {
+  background-color: #6B0F1A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #8B0000 !important;
+}
+
+.monaco-button:hover {
+  background-color: #8B0000 !important;
+}
+
+/* Accent color */
+.monaco-workbench .monaco-action-bar .action-item.checked .action-label {
+  color: #6B0F1A !important;
+}
+
+/* Scrollbars */
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(107, 15, 26, 0.4) !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  background: rgba(107, 15, 26, 0.7) !important;
+}
+
+/* Selection */
+.monaco-editor .selected-text {
+  background-color: rgba(107, 15, 26, 0.3) !important;
+}
+
+/* Cursor */
+.monaco-editor .cursor {
+  background-color: #6B0F1A !important;
+  border-color: #6B0F1A !important;
+}
+
+/* Line highlight */
+.monaco-editor .current-line {
+  border: none !important;
+  background-color: rgba(107, 15, 26, 0.1) !important;
+}
+
+/* Sidebar icons */
+.monaco-workbench .activitybar > .content .monaco-action-bar .action-item.checked .active-item-indicator:before {
+  border-left-color: #6B0F1A !important;
+}
+
+/* Input fields */
+.monaco-inputbox {
+  border: 1px solid #1A1A1A !important;
+}
+
+.monaco-inputbox.focused {
+  border-color: #6B0F1A !important;
+}
+
+/* Dropdown */
+.monaco-dropdown {
+  border: 1px solid #1A1A1A !important;
+}
+
+.monaco-dropdown:focus {
+  border-color: #6B0F1A !important;
+}
+
+/* Tree view selection */
+.monaco-list.focused .monaco-list-row.selected {
+  background-color: rgba(107, 15, 26, 0.2) !important;
+}
+
+.monaco-list .monaco-list-row.focused {
+  background-color: rgba(107, 15, 26, 0.1) !important;
+}
+
+/* Links */
+a {
+  color: #8B0000 !important;
+}
+
+a:hover {
+  color: #A52A2A !important;
+}
+
+/* Badge */
+.monaco-count-badge {
+  background-color: #6B0F1A !important;
+  color: #FFFFFF !important;
+}
+
+/* Progress bar */
+.monaco-progress-container .progress-bit {
+  background-color: #6B0F1A !important;
+}
+
+/* Syntax highlighting - Dark Gore colors */
+.mtk1 { color: #CCCCCC !important; } /* Default text */
+.mtk2 { color: #8B0000 !important; } /* Variables */
+.mtk3 { color: #A52A2A !important; } /* Keywords */
+.mtk4 { color: #800000 !important; } /* Strings */
+.mtk5 { color: #6B0F1A !important; } /* Functions */
+.mtk6 { color: #A52A2A !important; } /* Numbers */
+.mtk7 { color: #8B0000 !important; } /* Constants */
+.mtk8 { color: #FF0000 !important; } /* Errors */
+.mtk9 { color: #6B0F1A !important; } /* Classes */
+
+/* Blood drip effect at the top of the editor */
+.monaco-editor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #6B0F1A;
+  box-shadow: 0 0 5px #8B0000;
+  z-index: 1000;
+}
+
+/* Blood drips at random positions */
+.monaco-editor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 2px;
+  height: 15px;
+  background-color: #6B0F1A;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 0 3px #8B0000;
+  z-index: 1000;
+}
+
+.monaco-editor .view-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 3px;
+  height: 25px;
+  background-color: #6B0F1A;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 0 3px #8B0000;
+  z-index: 1000;
+}
+
+.monaco-editor .view-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 70%;
+  width: 2px;
+  height: 10px;
+  background-color: #6B0F1A;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 0 3px #8B0000;
+  z-index: 1000;
+}

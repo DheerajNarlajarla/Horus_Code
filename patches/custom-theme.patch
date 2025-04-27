@@ -1,0 +1,92 @@
+diff --git a/src/vs/workbench/browser/parts/editor/editor.ts b/src/vs/workbench/browser/parts/editor/editor.ts
+index xxxxxxx..yyyyyyy 100644
+--- a/src/vs/workbench/browser/parts/editor/editor.ts
++++ b/src/vs/workbench/browser/parts/editor/editor.ts
+@@ -xxx,6 +xxx,85 @@ export class EditorPart extends Part {
+ 	protected createContentArea(parent: HTMLElement): HTMLElement {
+ 		const editorPartContainer = document.createElement('div');
+ 		parent.appendChild(editorPartContainer);
++
++		// Create theme stylesheet link element
++		const customStyleElement = document.createElement('link');
++		customStyleElement.id = 'horuscode-custom-styles';
++		customStyleElement.rel = 'stylesheet';
++		customStyleElement.type = 'text/css';
++
++		// Default to Egyptian theme
++		customStyleElement.href = 'src/vs/workbench/browser/media/my-custom-theme.css';
++		document.head.appendChild(customStyleElement);
++
++		// Add Egyptian hieroglyphic font if available
++		const fontStyleElement = document.createElement('style');
++		fontStyleElement.id = 'horuscode-font-styles';
++		fontStyleElement.textContent = `
++			@font-face {
++				font-family: 'Egyptian';
++				src: local('Noto Sans Egyptian Hieroglyphs');
++			}
++		`;
++		document.head.appendChild(fontStyleElement);
++
++		// Create theme switcher
++		const createThemeSwitcher = () => {
++			// Check if theme switcher already exists
++			if (document.getElementById('horuscode-theme-switcher')) {
++				return;
++			}
++
++			// Create theme switcher container
++			const themeSwitcher = document.createElement('div');
++			themeSwitcher.id = 'horuscode-theme-switcher';
++			themeSwitcher.style.position = 'fixed';
++			themeSwitcher.style.bottom = '10px';
++			themeSwitcher.style.right = '10px';
++			themeSwitcher.style.zIndex = '9999';
++			themeSwitcher.style.display = 'flex';
++			themeSwitcher.style.flexDirection = 'row';
++			themeSwitcher.style.gap = '5px';
++
++			// Create theme buttons
++			const createThemeButton = (themeName, themeColor, themePath) => {
++				const button = document.createElement('button');
++				button.textContent = themeName;
++				button.style.backgroundColor = themeColor;
++				button.style.color = themeName === 'Dark Gore' ? '#FFFFFF' : '#000000';
++				button.style.border = '1px solid ' + themeColor;
++				button.style.borderRadius = '4px';
++				button.style.padding = '5px 10px';
++				button.style.cursor = 'pointer';
++				button.style.fontSize = '12px';
++				button.style.fontWeight = 'bold';
++				button.style.opacity = '0.7';
++				button.style.transition = 'opacity 0.3s';
++
++				button.addEventListener('mouseover', () => {
++					button.style.opacity = '1';
++				});
++
++				button.addEventListener('mouseout', () => {
++					button.style.opacity = '0.7';
++				});
++
++				button.addEventListener('click', () => {
++					customStyleElement.href = themePath;
++					localStorage.setItem('horuscode-theme', themeName);
++				});
++
++				return button;
++			};
++
++			// Add theme buttons with proper names
++			themeSwitcher.appendChild(createThemeButton('HorusCode', '#E6A23C', 'src/vs/workbench/browser/media/my-custom-theme.css'));
++			themeSwitcher.appendChild(createThemeButton('BorealisIDE', '#56B6C2', 'src/vs/workbench/browser/media/aurora-theme.css'));
++			themeSwitcher.appendChild(createThemeButton('BloodCode', '#6B0F1A', 'src/vs/workbench/browser/media/dark-gore-theme.css'));
++
++			document.body.appendChild(themeSwitcher);
++		};
++
++		// Add theme switcher after a short delay to ensure DOM is ready
++		setTimeout(createThemeSwitcher, 2000);
+
+ 		return editorPartContainer;
+ 	}

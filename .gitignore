@@ -16,3 +16,15 @@ build/windows/msi/Files*.wxs
 build/windows/msi/Files*.wixobj
 stores/snapcraft/insider/*.snap
 stores/snapcraft/stable/*.snap
+
+# Custom additions for Horus Code project
+# Downloaded files
+VSCodium-portable.zip
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Portable build output
+CustomVSCode-Portable/

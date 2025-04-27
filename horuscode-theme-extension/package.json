@@ -1,0 +1,21 @@
+{
+  "name": "horuscode-theme",
+  "displayName": "HorusCode Theme",
+  "description": "Egyptian-themed dark theme with gold accents",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "HorusCode",
+        "uiTheme": "vs-dark",
+        "path": "./themes/horuscode-color-theme.json"
+      }
+    ]
+  }
+}

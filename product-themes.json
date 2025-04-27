@@ -1,0 +1,46 @@
+{
+  "themes": [
+    {
+      "id": "egyptian",
+      "nameShort": "HorusCode",
+      "nameLong": "Horus Code Editor",
+      "applicationName": "horuscode",
+      "dataFolderName": ".horuscode",
+      "win32DirName": "HorusCode",
+      "win32NameVersion": "HorusCode",
+      "win32RegValueName": "HorusCode",
+      "win32AppUserModelId": "HorusCode.HorusCode",
+      "win32ShellNameShort": "HorusCode",
+      "darwinBundleIdentifier": "com.horuscode",
+      "linuxIconName": "horuscode"
+    },
+    {
+      "id": "aurora",
+      "nameShort": "BorealisIDE",
+      "nameLong": "Borealis Code Editor",
+      "applicationName": "borealiside",
+      "dataFolderName": ".borealiside",
+      "win32DirName": "BorealisIDE",
+      "win32NameVersion": "BorealisIDE",
+      "win32RegValueName": "BorealisIDE",
+      "win32AppUserModelId": "BorealisIDE.BorealisIDE",
+      "win32ShellNameShort": "BorealisIDE",
+      "darwinBundleIdentifier": "com.borealiside",
+      "linuxIconName": "borealiside"
+    },
+    {
+      "id": "darkgore",
+      "nameShort": "BloodCode",
+      "nameLong": "Blood Code Editor",
+      "applicationName": "bloodcode",
+      "dataFolderName": ".bloodcode",
+      "win32DirName": "BloodCode",
+      "win32NameVersion": "BloodCode",
+      "win32RegValueName": "BloodCode",
+      "win32AppUserModelId": "BloodCode.BloodCode",
+      "win32ShellNameShort": "BloodCode",
+      "darwinBundleIdentifier": "com.bloodcode",
+      "linuxIconName": "bloodcode"
+    }
+  ]
+}

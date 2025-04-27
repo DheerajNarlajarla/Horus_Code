@@ -1,0 +1,296 @@
+# Horus Code Project - Development Journey
+
+## Project Overview
+This document captures the development journey of creating custom-themed versions of VSCode/VSCodium. The project involves creating three distinct themes:
+1. HorusCode - Egyptian-themed with gold accents
+2. BorealisIDE - Northern Lights-inspired with blues and teals
+3. BloodCode - Dark Gore theme with Oxblood Red and Pitch Black
+
+## Initial Requirements
+- Create a custom version of VSCode with a different UI using open source VSCodium
+- Rename all relevant code elements to match the custom naming conventions
+- Create an executable installer (exe or msi) from the modified codebase to test in a sandboxed environment
+
+## Development Steps
+
+### 1. Creating Custom Icons
+We started by creating custom SVG icons for the application, replacing the default VSCodium icons with an Eye of Horus design:
+
+```svg
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="100" height="100" viewBox="0, 0, 100, 100">
+  <defs>
+    <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0" stop-color="#E6A23C"/>
+      <stop offset="1" stop-color="#F5D393"/>
+    </linearGradient>
+    <radialGradient id="Gradient_2" cx="50" cy="50" r="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1A1A1A"/>
+      <stop offset="1" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+  <g id="Layer_1">
+    <circle cx="50" cy="50" r="45" fill="url(#Gradient_2)"/>
+    <path d="M50,25 C40,25 30,30 25,40 C20,50 25,60 35,65 C40,67.5 45,70 50,70 C55,70 60,67.5 65,65 C75,60 80,50 75,40 C70,30 60,25 50,25 z" fill="none" stroke="url(#Gradient_1)" stroke-width="3"/>
+    <path d="M50,35 C45,35 40,37.5 37.5,40 C35,42.5 35,47.5 40,50 C42.5,51.25 45,52.5 50,52.5 C55,52.5 57.5,51.25 60,50 C65,47.5 65,42.5 62.5,40 C60,37.5 55,35 50,35 z" fill="none" stroke="url(#Gradient_1)" stroke-width="2"/>
+    <circle cx="50" cy="42.5" r="5" fill="url(#Gradient_1)"/>
+    <path d="M62.5,40 C65,42.5 70,45 75,47.5 C80,50 85,52.5 85,52.5" fill="none" stroke="url(#Gradient_1)" stroke-width="2.5"/>
+    <path d="M37.5,40 C35,42.5 30,45 25,47.5 C20,50 15,52.5 15,52.5" fill="none" stroke="url(#Gradient_1)" stroke-width="2.5"/>
+    <path d="M40,50 C40,50 35,60 30,70 C27.5,75 25,80 25,80" fill="none" stroke="url(#Gradient_1)" stroke-width="2.5"/>
+    <path d="M60,50 C60,50 65,60 70,70 C72.5,75 75,80 75,80" fill="none" stroke="url(#Gradient_1)" stroke-width="2.5"/>
+  </g>
+</svg>
+```
+
+### 2. Creating Custom CSS Themes
+We created three distinct CSS themes:
+
+#### HorusCode Theme (Egyptian-inspired)
+```css
+/* HorusCode Theme - Egyptian-inspired Gold and Dark */
+
+/* Main editor background */
+.monaco-editor {
+  background-color: #1A1A1A !important;
+}
+
+/* Sidebar background */
+.sidebar {
+  background-color: #121212 !important;
+}
+
+/* Activity bar */
+.monaco-workbench .part.activitybar {
+  background-color: #0A0A0A !important;
+}
+
+/* Primary colors: Gold (#E6A23C) on dark background */
+```
+
+#### BorealisIDE Theme (Northern Lights)
+```css
+/* BorealisIDE Theme - Inspired by Northern Lights */
+
+/* Main editor background */
+.monaco-editor {
+  background-color: #0E1621 !important;
+}
+
+/* Sidebar background */
+.sidebar {
+  background-color: #0A1019 !important;
+}
+
+/* Activity bar */
+.monaco-workbench .part.activitybar {
+  background-color: #050A12 !important;
+}
+
+/* Primary colors: Teal (#56B6C2) on deep blue background */
+```
+
+#### BloodCode Theme (Dark Gore)
+```css
+/* BloodCode Theme - Oxblood Red and Pitch Black */
+
+/* Main editor background */
+.monaco-editor {
+  background-color: #0A0A0A !important;
+}
+
+/* Sidebar background */
+.sidebar {
+  background-color: #050505 !important;
+}
+
+/* Activity bar */
+.monaco-workbench .part.activitybar {
+  background-color: #000000 !important;
+}
+
+/* Primary colors: Oxblood Red (#6B0F1A) on pitch black background */
+```
+
+### 3. Updating Product Information
+We modified the product.json file to reflect the new branding:
+
+```json
+{
+  "nameShort": "HorusCode",
+  "nameLong": "Horus Code Editor",
+  "applicationName": "horuscode",
+  "dataFolderName": ".horuscode",
+  "win32DirName": "HorusCode",
+  "win32NameVersion": "HorusCode",
+  "win32RegValueName": "HorusCode",
+  "win32AppUserModelId": "HorusCode.HorusCode",
+  "win32ShellNameShort": "HorusCode",
+  "darwinBundleIdentifier": "com.horuscode",
+  "linuxIconName": "horuscode"
+}
+```
+
+We also created a product-themes.json file to store information for all three themes:
+
+```json
+{
+  "themes": [
+    {
+      "id": "egyptian",
+      "nameShort": "HorusCode",
+      "nameLong": "Horus Code Editor"
+    },
+    {
+      "id": "aurora",
+      "nameShort": "BorealisIDE",
+      "nameLong": "Borealis Code Editor"
+    },
+    {
+      "id": "darkgore",
+      "nameShort": "BloodCode",
+      "nameLong": "Blood Code Editor"
+    }
+  ]
+}
+```
+
+### 4. Creating a Theme Switcher
+We implemented a theme switcher that allows users to switch between the three themes:
+
+```javascript
+// Create theme switcher
+const createThemeSwitcher = () => {
+  // Create theme buttons
+  const createThemeButton = (themeName, themeColor, themePath) => {
+    const button = document.createElement('button');
+    button.textContent = themeName;
+    button.style.backgroundColor = themeColor;
+    button.addEventListener('click', () => {
+      customStyleElement.href = themePath;
+      localStorage.setItem('horuscode-theme', themeName);
+    });
+    return button;
+  };
+  
+  // Add theme buttons
+  themeSwitcher.appendChild(createThemeButton('HorusCode', '#E6A23C', 'src/vs/workbench/browser/media/my-custom-theme.css'));
+  themeSwitcher.appendChild(createThemeButton('BorealisIDE', '#56B6C2', 'src/vs/workbench/browser/media/aurora-theme.css'));
+  themeSwitcher.appendChild(createThemeButton('BloodCode', '#6B0F1A', 'src/vs/workbench/browser/media/dark-gore-theme.css'));
+};
+```
+
+### 5. Build Scripts
+We created several build scripts to facilitate the building process:
+
+#### Initial Build Script (build_custom.bat)
+```batch
+@echo off
+echo Building Custom VS Code Editors - HorusCode, BorealisIDE, and BloodCode...
+
+REM Copy custom icons
+copy /Y icons\stable\mycode_cnl.svg icons\stable\codium_cnl.svg
+copy /Y icons\stable\mycode_clt.svg icons\stable\codium_clt.svg
+copy /Y icons\stable\mycode_cnl_w80_b8.svg icons\stable\codium_cnl_w80_b8.svg
+
+REM Create media directory if it doesn't exist
+mkdir vscode\src\vs\workbench\browser\media 2>nul
+
+REM Copy all custom CSS themes with their new names
+copy /Y src\stable\horuscode-theme.css vscode\src\vs\workbench\browser\media\my-custom-theme.css
+copy /Y src\stable\borealiside-theme.css vscode\src\vs\workbench\browser\media\aurora-theme.css
+copy /Y src\stable\bloodcode-theme.css vscode\src\vs\workbench\browser\media\dark-gore-theme.css
+
+REM Apply custom patches
+mkdir patches\user 2>nul
+copy /Y patches\custom-theme.patch patches\user\
+
+REM Run the build script
+bash build.sh
+
+echo Build completed!
+```
+
+#### Installer Build Script (build_installer.ps1)
+```powershell
+# PowerShell script to build a complete installer for custom VSCode
+Write-Host "Building installable version of Custom VS Code Editors..." -ForegroundColor Green
+
+# Check for dependencies
+# Install dependencies
+# Build VSCode
+# Create Windows installer
+
+Write-Host "Build completed!" -ForegroundColor Green
+Write-Host "Installer should be available in the vscode\.build\win32-x64\setup directory" -ForegroundColor Green
+```
+
+#### Simple Portable Build Script (build_simple_portable.ps1)
+```powershell
+# PowerShell script to build a simple portable version by downloading VSCodium
+Write-Host "Building simple portable version of Custom VS Code Editors..." -ForegroundColor Green
+
+# Download VSCodium
+# Extract it
+# Apply customizations
+# Create theme switcher
+
+Write-Host "Build completed successfully!" -ForegroundColor Green
+```
+
+### 6. Build Issues and Solutions
+We encountered issues with the initial build script that relied on WSL/bash:
+
+```
+WSL (12 - Relay) ERROR: CreateProcessCommon:640: execvpe(/bin/bash) failed: No such file or directory
+```
+
+To address this, we created PowerShell-based alternatives:
+1. Updated build_custom.bat to use PowerShell instead of bash
+2. Created build_installer.ps1 for building a full installer
+3. Created build_simple_portable.ps1 for creating a portable version
+
+The simple portable build script was enhanced with progress indicators and time estimates:
+- Download progress with speed indicators
+- Extraction progress with time estimates
+- Step-by-step progress tracking
+- Total build time calculation
+
+### 7. Testing Approaches
+We explored several approaches for testing the custom themes:
+
+1. **Full Build Approach**: Building VSCode from source with customizations
+   - Most complex but gives full control
+   - Requires Node.js, Git, Python, and build tools
+   - Takes 30-60 minutes to complete
+
+2. **VSCode Extension Approach**: Creating theme extensions
+   - Moderate complexity
+   - Can be published to VSCode Marketplace
+   - Example: horuscode-theme-extension
+
+3. **Custom CSS Approach**: Using the Custom CSS and JS Loader extension
+   - Simplest approach
+   - Applies custom CSS directly to VSCode
+   - Doesn't change application name or icon
+
+4. **Simple Portable Approach**: Downloading VSCodium and applying customizations
+   - Good balance of simplicity and customization
+   - Creates a portable version with theme switcher
+   - No building from source required
+
+### 8. Final Solution
+The final solution uses the Simple Portable Approach:
+1. Downloads VSCodium portable version
+2. Extracts it to a "CustomVSCode-Portable" directory
+3. Copies custom themes and icons
+4. Creates a theme switcher batch file
+5. Creates a launcher batch file
+6. Includes detailed progress reporting and time estimates
+
+This approach allows for testing all three themes in a sandboxed environment without the complexity of building from source.
+
+## Conclusion
+The Horus Code project demonstrates how to create custom-themed versions of VSCode with unique branding and visual styles. The three themes (HorusCode, BorealisIDE, and BloodCode) each have their own distinct aesthetic while maintaining the full functionality of VSCode.
+
+The simple portable build approach provides an easy way to test these themes in a sandboxed environment, with a convenient theme switcher for switching between them.

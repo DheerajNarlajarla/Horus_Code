@@ -1,4 +1,15 @@
 {
+  "nameShort": "HorusCode",
+  "nameLong": "Horus Code Editor",
+  "applicationName": "horuscode",
+  "dataFolderName": ".horuscode",
+  "win32DirName": "HorusCode",
+  "win32NameVersion": "HorusCode",
+  "win32RegValueName": "HorusCode",
+  "win32AppUserModelId": "HorusCode.HorusCode",
+  "win32ShellNameShort": "HorusCode",
+  "darwinBundleIdentifier": "com.horuscode",
+  "linuxIconName": "horuscode",
   "extensionAllowedBadgeProviders": [
     "api.bintray.com",
     "api.travis-ci.com",
