@@ -20,11 +20,13 @@ stores/snapcraft/stable/*.snap
 # Custom additions for Horus Code project
 # Downloaded files
 VSCodium-portable.zip
+vscodium.tar.gz
 
 # Temporary files
 *.tmp
 *.temp
 *.log
 
-# Portable build output
-CustomVSCode-Portable/
+# Build output directories
+horus_portable/
+horus_installer/

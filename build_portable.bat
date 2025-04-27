@@ -1,7 +1,7 @@
 @echo off
-echo Building portable version of Custom VS Code Editors...
+echo Building portable version of Horus Code...
 
-REM Run the PowerShell build script with elevated privileges
-powershell -ExecutionPolicy Bypass -Command "Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -File build_portable.ps1' -Verb RunAs"
+REM Run the PowerShell build script
+powershell -ExecutionPolicy Bypass -NoExit -File build_horus_portable.ps1
 
-echo Build script launched with admin privileges. Check the PowerShell window for progress.
+echo Build script completed!

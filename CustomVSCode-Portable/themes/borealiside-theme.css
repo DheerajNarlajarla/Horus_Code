@@ -1,0 +1,172 @@
+/* BorealisIDE Theme - Inspired by Northern Lights */
+
+/* Main editor background */
+.monaco-editor {
+  background-color: #0E1621 !important;
+}
+
+/* Sidebar background */
+.sidebar {
+  background-color: #0A1019 !important;
+}
+
+/* Activity bar */
+.monaco-workbench .part.activitybar {
+  background-color: #050A12 !important;
+}
+
+/* Title bar */
+.monaco-workbench .part.titlebar {
+  background-color: #050A12 !important;
+}
+
+/* Status bar */
+.monaco-workbench .part.statusbar {
+  background-color: #050A12 !important;
+  border-top: 1px solid #56B6C2 !important;
+}
+
+/* Editor group header */
+.monaco-workbench .part.editor > .content .editor-group-container > .title {
+  background-color: #0A1019 !important;
+}
+
+/* Tabs */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab {
+  background-color: #0A1019 !important;
+  border: 1px solid transparent !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active {
+  background-color: #0E1621 !important;
+  border-top: 1px solid #56B6C2 !important;
+}
+
+/* Panel */
+.monaco-workbench .part.panel {
+  background-color: #0A1019 !important;
+  border-top: 1px solid #56B6C2 !important;
+}
+
+/* Terminal */
+.monaco-workbench .part.panel > .content .monaco-editor {
+  background-color: #0A1019 !important;
+}
+
+/* Buttons */
+.monaco-button {
+  background-color: #56B6C2 !important;
+  color: #050A12 !important;
+  border: 1px solid #88C0D0 !important;
+}
+
+.monaco-button:hover {
+  background-color: #88C0D0 !important;
+}
+
+/* Accent color */
+.monaco-workbench .monaco-action-bar .action-item.checked .action-label {
+  color: #56B6C2 !important;
+}
+
+/* Scrollbars */
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(86, 182, 194, 0.4) !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  background: rgba(86, 182, 194, 0.7) !important;
+}
+
+/* Selection */
+.monaco-editor .selected-text {
+  background-color: rgba(86, 182, 194, 0.3) !important;
+}
+
+/* Cursor */
+.monaco-editor .cursor {
+  background-color: #56B6C2 !important;
+  border-color: #56B6C2 !important;
+}
+
+/* Line highlight */
+.monaco-editor .current-line {
+  border: none !important;
+  background-color: rgba(86, 182, 194, 0.1) !important;
+}
+
+/* Sidebar icons */
+.monaco-workbench .activitybar > .content .monaco-action-bar .action-item.checked .active-item-indicator:before {
+  border-left-color: #56B6C2 !important;
+}
+
+/* Input fields */
+.monaco-inputbox {
+  border: 1px solid #1E2D3D !important;
+}
+
+.monaco-inputbox.focused {
+  border-color: #56B6C2 !important;
+}
+
+/* Dropdown */
+.monaco-dropdown {
+  border: 1px solid #1E2D3D !important;
+}
+
+.monaco-dropdown:focus {
+  border-color: #56B6C2 !important;
+}
+
+/* Tree view selection */
+.monaco-list.focused .monaco-list-row.selected {
+  background-color: rgba(86, 182, 194, 0.2) !important;
+}
+
+.monaco-list .monaco-list-row.focused {
+  background-color: rgba(86, 182, 194, 0.1) !important;
+}
+
+/* Links */
+a {
+  color: #88C0D0 !important;
+}
+
+a:hover {
+  color: #8FBCBB !important;
+}
+
+/* Badge */
+.monaco-count-badge {
+  background-color: #56B6C2 !important;
+  color: #050A12 !important;
+}
+
+/* Progress bar */
+.monaco-progress-container .progress-bit {
+  background-color: #56B6C2 !important;
+}
+
+/* Syntax highlighting - Aurora colors */
+.mtk1 { color: #D8DEE9 !important; } /* Default text */
+.mtk2 { color: #88C0D0 !important; } /* Variables */
+.mtk3 { color: #81A1C1 !important; } /* Keywords */
+.mtk4 { color: #A3BE8C !important; } /* Strings */
+.mtk5 { color: #B48EAD !important; } /* Functions */
+.mtk6 { color: #EBCB8B !important; } /* Numbers */
+.mtk7 { color: #D08770 !important; } /* Constants */
+.mtk8 { color: #BF616A !important; } /* Errors */
+.mtk9 { color: #5E81AC !important; } /* Classes */
+
+/* Special Aurora glow effect for the editor */
+.monaco-editor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8FBCBB, #88C0D0, #81A1C1, #5E81AC, #B48EAD, #BF616A, #D08770, #EBCB8B, #A3BE8C);
+  opacity: 0.7;
+  z-index: 1000;
+}

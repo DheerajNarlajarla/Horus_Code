@@ -79,25 +79,25 @@ To build the custom editors:
 
 3. Run one of the build scripts:
 
-   **Simple Portable Build (Recommended):**
+   **Portable Build (Recommended):**
    ```bash
    # On Windows
-   .\build_simple_portable.bat
+   .\build_portable.bat
+
+   # On Linux
+   ./build_linux.sh
    ```
    This will download VSCodium and create a portable version with all three themes.
 
-   **Full Build (Advanced):**
+   **Installer Build (Advanced):**
    ```bash
    # On Windows
    .\build_installer.bat
-
-   # On Linux/macOS
-   ./build_custom.sh
    ```
 
 4. The build process will take some time. Once completed:
-   - For the simple portable build: Navigate to the "CustomVSCode-Portable" directory
-   - For the full build: Find the installer in the "vscode\.build\win32-x64\setup" directory
+   - For the portable build: Navigate to the "horus_portable" directory
+   - For the installer build: Find the installer in the "horus_installer" directory
 
 ## <a id="theme-switching"></a>Theme Switching
 

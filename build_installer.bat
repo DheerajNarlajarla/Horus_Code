@@ -1,8 +1,7 @@
 @echo off
-echo Building installable version of Custom VS Code Editors...
+echo Building installer for Horus Code...
 
-REM Run the PowerShell build script with elevated privileges and keep the window open
-powershell -ExecutionPolicy Bypass -Command "Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -NoExit -File build_installer.ps1' -Verb RunAs"
+REM Run the PowerShell build script
+powershell -ExecutionPolicy Bypass -NoExit -File build_horus_installer.ps1
 
-echo Build script launched with admin privileges. Check the PowerShell window for progress.
-echo The PowerShell window will remain open to show any errors.
+echo Build script completed!
