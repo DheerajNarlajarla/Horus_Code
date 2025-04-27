@@ -1,7 +1,7 @@
 <div id="custom-editors-logo" align="center">
     <br />
-    <img src="./icons/stable/mycode_cnl.svg" alt="Custom Editors Logo" width="200"/>
-    <h1>Custom VS Code Editors</h1>
+    <img src="./icons/stable/mycode_cnl.svg" alt="Horus Code Logo" width="200"/>
+    <h1>Horus Code Project</h1>
     <h3>Three Uniquely Themed Code Editors Based on VSCodium</h3>
 </div>
 
@@ -73,20 +73,31 @@ To build the custom editors:
 
 2. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/custom-vscode-editors.git
-   cd custom-vscode-editors
+   git clone https://github.com/DheerajNarlajarla/Horus_Code.git
+   cd Horus_Code
    ```
 
-3. Run the build script:
+3. Run one of the build scripts:
+
+   **Simple Portable Build (Recommended):**
    ```bash
    # On Windows
-   .\build_custom.bat
+   .\build_simple_portable.bat
+   ```
+   This will download VSCodium and create a portable version with all three themes.
+
+   **Full Build (Advanced):**
+   ```bash
+   # On Windows
+   .\build_installer.bat
 
    # On Linux/macOS
    ./build_custom.sh
    ```
 
-4. The build process will take some time. Once completed, you'll find the built application in the appropriate directory for your platform.
+4. The build process will take some time. Once completed:
+   - For the simple portable build: Navigate to the "CustomVSCode-Portable" directory
+   - For the full build: Find the installer in the "vscode\.build\win32-x64\setup" directory
 
 ## <a id="theme-switching"></a>Theme Switching
 
