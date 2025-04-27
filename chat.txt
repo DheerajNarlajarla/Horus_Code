@@ -172,7 +172,7 @@ const createThemeSwitcher = () => {
     });
     return button;
   };
-  
+
   // Add theme buttons
   themeSwitcher.appendChild(createThemeButton('HorusCode', '#E6A23C', 'src/vs/workbench/browser/media/my-custom-theme.css'));
   themeSwitcher.appendChild(createThemeButton('BorealisIDE', '#56B6C2', 'src/vs/workbench/browser/media/aurora-theme.css'));
@@ -290,7 +290,41 @@ The final solution uses the Simple Portable Approach:
 
 This approach allows for testing all three themes in a sandboxed environment without the complexity of building from source.
 
+### 9. Streamlining Build Scripts
+Based on feedback, we streamlined the build scripts to reduce clutter:
+
+1. **Removed redundant scripts**:
+   - Removed build_custom.bat, build_custom.ps1
+   - Removed build_simple_portable.bat, build_simple_portable.ps1
+
+2. **Created two main build scripts**:
+   - `build_portable.bat` (using `build_horus_portable.ps1`) - For creating a portable version
+   - `build_installer.bat` (using `build_horus_installer.ps1`) - For creating an installer
+
+3. **Added Linux support**:
+   - Created `build_linux.sh` for future Linux builds
+
+4. **Renamed output directories**:
+   - Changed from `CustomVSCode-Portable` to `horus_portable`
+   - Created `horus_installer` directory for installer output
+
+5. **Updated documentation**:
+   - Updated README.md with new build instructions
+   - Updated .gitignore to exclude new output directories
+
+### 10. GitHub Repository
+We uploaded the entire project to GitHub:
+- Repository URL: https://github.com/DheerajNarlajarla/Horus_Code.git
+- All source code, themes, and build scripts are available in the repository
+- The repository is organized and ready for further development
+
+### 11. Final Cleanup
+After reviewing the repository, we removed additional unnecessary files to further streamline the project:
+- Removed redundant documentation files
+- Removed any temporary or backup files
+- Ensured only the essential files remain in the repository
+
 ## Conclusion
 The Horus Code project demonstrates how to create custom-themed versions of VSCode with unique branding and visual styles. The three themes (HorusCode, BorealisIDE, and BloodCode) each have their own distinct aesthetic while maintaining the full functionality of VSCode.
 
-The simple portable build approach provides an easy way to test these themes in a sandboxed environment, with a convenient theme switcher for switching between them.
+The streamlined build scripts make it easy to create either a portable version for testing or an installer for distribution. The portable build approach provides an easy way to test all three themes in a sandboxed environment, with a convenient theme switcher for switching between them.

@@ -1,0 +1,57 @@
+# Horus Code Project - Context Instructions
+
+This file contains instructions on how to provide context about the Horus Code project to AI assistants in future conversations.
+
+## Quick Context Method
+
+For a quick reminder, you can simply provide this information at the beginning of your conversation:
+
+"We were working on the Horus Code project (https://github.com/DheerajNarlajarla/Horus_Code.git) where we created three custom VS Code themes (HorusCode, BorealisIDE, and BloodCode) and streamlined the build scripts to build_portable.bat and build_installer.bat. The output directories are now horus_portable and horus_installer."
+
+## Detailed Context Method
+
+For more detailed context, you can upload the chat.txt file at the beginning of your conversation. This file contains:
+
+1. The complete development journey
+2. Code samples for all components
+3. Detailed explanations of each step
+4. Build script information
+5. Testing approaches
+6. Final solution details
+
+## GitHub Repository Method
+
+You can also provide the GitHub repository URL:
+https://github.com/DheerajNarlajarla/Horus_Code.git
+
+This allows the AI to see all the code and changes we've made.
+
+## Key Information to Include
+
+When providing context, make sure to mention:
+
+1. **Project Name**: Horus Code
+2. **Theme Names**: 
+   - HorusCode (Egyptian theme with gold accents)
+   - BorealisIDE (Northern Lights theme with blues and teals)
+   - BloodCode (Dark Gore theme with Oxblood Red and Pitch Black)
+3. **Build Scripts**:
+   - build_portable.bat (creates portable version in horus_portable directory)
+   - build_installer.bat (creates installer in horus_installer directory)
+   - build_linux.sh (for future Linux support)
+4. **GitHub Repository**: https://github.com/DheerajNarlajarla/Horus_Code.git
+
+## Example Prompt
+
+Here's an example of how to start a new conversation:
+
+"I'm continuing work on the Horus Code project (https://github.com/DheerajNarlajarla/Horus_Code.git). We previously created three custom VS Code themes (HorusCode, BorealisIDE, and BloodCode) and streamlined the build scripts. I've run the build_portable.bat script and would like to discuss [specific topic or issue]."
+
+## Uploading the chat.txt File
+
+To upload the chat.txt file:
+1. Look for an upload or attachment option in the chat interface
+2. Select the chat.txt file from c:\Users\dheer\Documents\IDE\my-custom-vscode\chat.txt
+3. Once uploaded, mention that the file contains the complete development history of the project
+
+This will provide the AI assistant with comprehensive context about the Horus Code project and allow for a seamless continuation of your work.
